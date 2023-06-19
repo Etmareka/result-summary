@@ -1,0 +1,244 @@
+@font-face {
+  font-family: hanken grotesk;
+  src: url("fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-slate-blue: hsla(252, 100%, 67%); /*background */
+  --light-royal-blue: hsla(241, 81%, 54%); /*background */
+  --violet-blue: hsla(256, 72%, 46%, 1); /*circle */
+  --persian-blue: hsla(241, 72%, 46%, 0); /*circle */
+  --white: hsla(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: hanken grotesk;
+}
+
+body {
+  background-color: var(--pale-blue);
+}
+
+main {
+  margin: 120px auto;
+  width: 540px;
+  display: flex;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.result {
+  padding: 20px 28px;
+  border-radius: 20px;
+  background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-result {
+  color: var(--light-lavender);
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+  margin-bottom: 30px;
+}
+
+.score p:nth-child(1) {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+}
+.score p:nth-child(2) {
+  color: hsla(241, 100%, 89%, 0.6);
+}
+
+.total-result {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.desc-result {
+  text-align: center;
+  width: 200px;
+  color: var(--light-lavender);
+  font-size: 14px;
+}
+
+.summary {
+  width: 100%;
+  padding: 20px 28px 32px;
+}
+
+.summary h1 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+
+.detail-summary {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-radius: 5px;
+}
+
+.detail-summary.reaction {
+  background-color: hsla(0, 100%, 79%, 0.1);
+}
+
+.detail-summary.memory {
+  background-color: hsla(39, 100%, 63%, 0.1);
+}
+
+.detail-summary.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.detail-summary.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.list-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-summary p {
+  font-size: 0.8rem;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.list-summary.reaction p {
+  color: var(--light-red);
+}
+
+.list-summary.memory p {
+  color: var(--orangey-yellow);
+}
+
+.list-summary.verbal p {
+  color: var(--green-teal);
+}
+.list-summary.visual p {
+  color: var(--cobalt-blue);
+}
+
+.summary-score {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.last-summary-score {
+  color: hsla(224, 30%, 27%, 0.3);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button button {
+  border: none;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 12px 80px;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background-image: linear-gradient(hsla(252, 100%, 67%, 0.9), hsla(241, 81%, 54%));
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .result {
+    padding: 20px 0;
+    width: 100%;
+    height: 45vh;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .title-result {
+    font-size: 14px;
+  }
+
+  .score {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .score p:nth-child(1) {
+    font-size: 2.5rem;
+  }
+  .score p:nth-child(2) {
+    font-size: 0.8rem;
+  }
+
+  .total-result {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .desc-result {
+    font-size: 12px;
+  }
+
+  .summary {
+    height: 55vh;
+    padding: 12px 24px 32px;
+  }
+
+  .summary h1 {
+    font-size: 0.95rem;
+  }
+
+  .list-summary img {
+    width: 18px;
+  }
+
+  .list-summary p {
+    font-size: 0.9rem;
+  }
+}
